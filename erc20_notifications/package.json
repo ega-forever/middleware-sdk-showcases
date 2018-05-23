@@ -1,0 +1,38 @@
+{
+  "name": "middleware_service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "dotenv": "^4.0.0",
+    "ganache-cli": "^6.1.0",
+    "lodash": "^4.17.4",
+    "middleware_service.sdk": "github:chronobank/middleware-service-sdk",
+    "mongoose": "^4.11.11",
+    "mongoose-long": "^0.1.1",
+    "nan": "^2.10.0",
+    "require-all": "^2.2.0",
+    "textmagic-rest-client": "^1.0.10",
+    "web3": "^0.20.0"
+  },
+  "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint.js -c .eslintrc.js --ext .js --fix --ignore-path .eslintignore .",
+    "rpc": "node ./node_modules/middleware_eth.blockProcessor/ipcConverter.js",
+    "block_processor": "node ./node_modules/middleware_eth.blockProcessor",
+    "erc20_processor": "node ./node_modules/middleware-erc20-token",
+    "test": "node ./node_modules/mocha/bin/mocha -t 90000 tests",
+    "migrate_red": "node ./node_modules/middleware_service.sdk/migrate.js run"
+  },
+  "author": "chronobank",
+  "license": "AGPL-3.0",
+  "description": "",
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "chai": "^4.1.1",
+    "eslint": "^4.6.1",
+    "middleware_eth.blockProcessor": "github:chronobank/middleware-eth-blockprocessor",
+    "middleware-erc20-token": "github:chronobank/middleware-eth-erc20",
+    "eslint-plugin-chronobank": "github:chronobank/eslint-plugin-chronobank",
+    "mocha": "^3.5.0"
+  }
+}
